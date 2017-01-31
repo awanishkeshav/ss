@@ -1,0 +1,29 @@
+Vishal:
+
+        Load list of consumers (possibly need to add mock data in seed.sql)
+        Add image to schenario
+        add assocInfo in scenario
+        Load list of scenarios
+        Do the html stuff
+
+Awanish:
+
+        rle/txn POST
+
+            merchant id,
+            transaction type,
+            card number,
+            MCC code
+            amount,
+            location,
+
+            yes/no
+                    - register the txns
+                    - do aggs
+                    - send notif
+
+
+Rajiv
+        Queries
+            How does merchant register
+            How do we simulate location (latitude longitude)

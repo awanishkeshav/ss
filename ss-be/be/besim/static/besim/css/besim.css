@@ -1,0 +1,466 @@
+body{
+	padding-right: 0 !important;
+	background-color:#eee;
+}
+ body.modal-open { overflow:inherit; padding-right:inherit !important; }
+.page-wrapper{
+	width:990px;
+    margin: 12px auto 0;
+    position: relative;
+}
+
+.page-wrapper .panel{
+	background-color:rgb(216, 216, 216);
+}
+
+.page-wrapper .panel-body{
+	padding:15px 18px 15px 15px;
+}
+
+.page-wrapper .section{
+	margin-bottom:20px;
+	margin-top:40px;
+}
+
+.col-md-3{
+	padding:0;
+}
+
+.page{
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    padding: 9px 14px;
+}
+
+.scenario-block{
+	cursor:pointer;
+	text-align:center;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 4px 0 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.scenario-wrapper {
+	clear:both;
+}
+
+.scenario-wrapper a:focus ,.scenario-wrapper a:hover{
+	text-decoration:none;
+}
+
+.category{
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+}
+
+.scenario-block img{
+	border-radius:5px 5px 0 0;
+}
+
+.scenario-block-footer{
+    color: #fff;
+    padding: 15px;
+		margin-top:-77px;
+  	text-align:center;
+}
+
+.scenario-block-footer-1{
+    background-color: rgb(149, 52, 55);
+}
+
+.scenario-block-footer-3{
+    background-color: rgb(41,154,22);
+}
+
+.scenario-block-footer-2{
+    background-color: rgb(55, 116, 153);
+}
+
+.scenario-block-footer-4{
+    background-color: rgb(227,108,9);
+}
+
+.scenario-block-footer .name{
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.scenario-block-footer .location{
+}
+
+.consumer-account-btn{
+
+}
+
+.wrapper{
+  height: 300px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center -25px;
+  background-repeat: no-repeat;
+	border-radius:5px 5px 0 0;
+}
+.wrapper.custom {
+	background-position: center center;
+}
+.modal-wrapper{
+  height: 300px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center -33px;
+}
+
+.modal-footer{
+    border-top: medium none;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.modal-dialog{
+	width:500px !important;
+}
+
+.modal-body .scenario-block-footer{
+}
+
+h1.my-card{
+    color: rgb(191, 191, 191);
+    font-size: 5em;
+    text-align: center;
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+.secondswipe{
+	color: rgb(154, 186, 215);
+    font-size: 2.4em;
+    text-align: center;
+}
+
+.scenario-block-footer-black{
+   background-color: #333;
+}
+
+.modal-body .payment-form{
+	margin-top:40px;
+}
+
+.modal-body{
+	padding:0;
+}
+
+#payment_form .control-label{
+	display:none;
+}
+
+.btn-success{
+	background-color:#333;
+	border-color:#333;
+}
+
+.btn-success:hover, .btn-success:focus{
+	background-color:#333;
+	border-color:#333;
+}
+
+.btn-default{
+	background-color:rgb(191,191,191);
+	border-color:rgb(191,191,191);
+	color:#fff;
+}
+
+.btn-default:hover, .btn-default:focus{
+	background-color:rgb(191,191,191);
+	border-color:rgb(191,191,191);
+	color:#fff;
+}
+
+.consumer-account-btn .btn-info{
+	background-color:rgb(191,191,191);
+	border-color:rgb(191,191,191);
+}
+
+.consumer-account-btn .btn-info:hover,.consumer-account-btn .btn-info:focus {
+	background-color:rgb(191,191,191);
+	border-color:rgb(191,191,191);
+}
+
+.response-time{
+	font-size:11px;
+}
+
+.server-response-error-msg{
+    color: #b94a48;
+    font-size: 11px;
+}
+
+.panel-body a:hover, .panel-body a:focus{
+	text-decoration:none;
+	color:#fff;
+}
+
+.scenario-block-footer-custom {
+
+}
+
+.wrapper-custom {
+    height: 350px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+	border-radius:5px;
+	position:relative;
+}
+
+.payment-custom-form label{
+	float:left;
+	width:115px;
+	color:rgb(166, 166, 166);
+}
+
+.payment-custom-form input,.payment-custom-form select{
+	width:210px;
+}
+
+.payment-custom-form {
+	padding: 15px;
+}
+
+.payment-custom-form .model-footer{
+	margin-left:115px;
+}
+
+.modal-header{
+	text-align:center;
+}
+
+.wrapper-custom img{
+	position:absolute;
+	top:10%;
+}
+
+.bootstrap-select {
+    width: 210px !important;
+}
+
+/*
+* 	Owl Carousel Owl Demo Theme
+*	v1.23
+*/
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #869791;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+
+ .owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  background-image: url("../images/carousel-left.png");
+  height: 45px;
+  left: -20px;
+  top: 180px;
+  width: 20px;
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  background-image: url("../images/carousel-right.png");
+  height: 45px;
+  right: -20px;
+  top: 180px;
+  width: 20px;
+}
+
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+  margin-right: 0;
+}
+
+.modal {
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  padding: 0;
+  width: 500px;
+  margin-left: -250px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+}
+
+.modal.container {
+  max-width: none;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height:100% !important;
+}
+
+.button-action-wrapper{
+	padding-top:10px;
+}
+/*Satya added*/
+@media (min-width:991px) {
+	.container {
+		max-width: 900px;
+ }
+}
+#owl-demo .item{
+		margin: 10px;
+}
+#owl-demo .item img{
+		display: block;
+		width: 100%;
+		height: auto;
+}
+.app-header {
+	height: 100px;
+}
+.profile-wrap {
+  	background-color: rgb(191, 191, 191);
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 280px;
+}
+.profile-wrap .caret {
+		margin-top:10px;
+}
+.app-header .dropdown-menu{
+  	background-color: #eee;
+  	margin:0;
+  	width:100%;
+}
+.app-header .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+  background-color: rgb(191,191,191);
+}
+a:hover {
+	text-decoration: none;
+}
+.modal, .modal-content {
+	border: none;
+}
+.form-control, .modal, .modal-content, .dropdown-menu, .btn{
+	border-radius: 0;
+}
+.modal-body .form-wrapper {
+	margin: 0 auto;
+  max-width: 265px;
+  padding: 90px 30px 30px;
+}
+.modal-body .btn{
+	width: 100px;
+}
+.form-wrapper #id_amount {
+    border-color: #666;
+    border-width: 2px;
+}
+.button-bar{
+    margin-left: 115px;
+}
+@media (max-width:767px) {
+	.app-header {
+		height: auto;
+	}
+	.modal-body {
+		padding: 15px;
+	}
+	.wrapper {
+		background-position:0 -50px;
+  }
+  .modal-wrapper {
+ 		background-position:0 -50px;
+  }
+  .modal-body .form-wrapper {
+ 		padding: 30px;
+  }
+	.bootstrap-select {
+		width: 100% !important;
+	}
+  .payment-custom-form input, .payment-custom-form select {
+  	width: 100% !important;
+  }
+  .payment-custom-form label {
+  	display:block;
+  	float:none;
+  }
+.owl-carousel {
+    display:block;
+  }
+
+.button-bar{
+    margin-left: 0px;
+  }
+}

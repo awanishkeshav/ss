@@ -1,0 +1,206 @@
+{% load bootstrap3 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript jquery=1 %}
+
+{% bootstrap_messages %}
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% bootstrap_form_errors form %}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}besim/css/besim_mobile.css" />
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}besim/css/bootstrap-select.css">
+
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}besim/css/jcarousel.responsive.css" />
+<script type="text/javascript" src="{{ STATIC_URL }}besim/js/besim_mob.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}besim/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}besim/js/bootstrap-select.js"></script>
+<div class="page-wrapper">
+	<div class="panel panel-default">
+
+		<div class="panel-body">
+
+			<div class="btn-group consumer-account-btn">
+			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+				Choose Consumer Account <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" role="menu">
+				{% for consumer in consumers %}
+					 <li><a href="#" id="consumer-card-{{forloop.counter}}" card_num={{consumer.cardNum}}>{{consumer.firstName}}  {{consumer.lastName}} {{consumer.cardNum}}</a></li>
+				{% endfor %}
+			  </ul>
+			</div>
+
+			{% if scenario_list %}
+            <div class="jcarousel-wrapper">
+
+			    <div class=" row section scenario-wrapper">
+				<ul>
+				{% for scenario in scenario_list %}
+					<li class="btn-run-test" id="{{ scenario.id }}" data-name="{{ scenario.merchantName }}" data-location="{{scenario.location}}">
+					  <div class="col-md-3">
+
+						<div class="imageCache" style="display:none;">
+							<div class="cache-{{forloop.counter}}" src="{{ MEDIA_URL }}{{scenario.file}}"></div>
+						</div>
+
+						<a title= "{{ scenario.merchantName }}" data-toggle="modal" data-target="#testTransaction" data-image-url = "{{ MEDIA_URL }}{{scenario.file}}">
+							<div class="category">i.{{scenario.name}}</div>
+							<div class="scenario-block">
+								<div class="wrapper" style="background-image: url({{ MEDIA_URL }}{{scenario.file}});">
+								</div>
+								<div class='scenario-block-footer-{{forloop.counter}} scenario-block-footer' >
+									<div class='name'>{{ scenario.merchantName }}</div>
+									<div class='location'>{{scenario.location}}</div>
+								</div>
+							</div>
+						</a>
+					  </div>
+					 </li>
+				{% endfor %}
+					 <li class="btn-run-test-custom">
+					  <div class="col-md-3">
+						<a data-image-url="/media/media/files/custom-scenario.png" data-target="#testCustomTransaction" data-toggle="modal" title="">
+							<div class="category">&nbsp;</div>
+							<div class="scenario-block">
+								<img src="http://placehold.it/220x275/ffffff/000000&text=Custom%20Scenario">
+							</div>
+						</a>
+					  </div>
+					 </li>
+				</ul>
+
+				</div>
+			</div>
+			{% else %}
+				<p>No Scenario are available.</p>
+			{% endif %}
+
+			<div class='footer'>
+				<div class='my-card'>my card, my way</div>
+				<div class='secondswipe'>
+					<img src="{{ MEDIA_URL }}media/files/logo.png" width="175" height="26">
+				</div>
+			</div>
+		</div>
+
+</div>
+
+<div class="modal fade" id="testTransaction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+	  <div class="modal-body">
+		<div class='row'>
+			<div class="col-md-6">
+				<div class="modal-wrapper" class="img-div">
+				</div>
+				<div class='scenario-block-footer' >
+					<div class='name'></div>
+					<div class='location'></div>
+				</div>
+			</div>
+			<div class="col-md-5 payment-form">
+				<div class="ajax-response-wrapper">
+				</div>
+				<div class='please-wait' style="display:none;">
+					<h3>Please wait.</h3>
+					<div class="progress">
+						  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+							<span class="sr-only">45% Complete</span>
+						  </div>
+					</div>
+				</div>
+				<div class="error-notifications"></div>
+				<div class="ajax-mainform-wrapper">
+					<p>
+						<form method="post" name="payment form" id="payment_form">
+							{% csrf_token %}
+							{% bootstrap_form form %}
+							<input type="hidden" name="scenario_id" class="scenario-run-id" value="">
+							<input type="hidden" name="card_number" class="card-num" value="">
+							<!-- <input id="button" type="button" class="btn btn-success" value="Pay"/>-->
+						</form>
+					</p>
+				</div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default btn-cancel" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-success btn-pay">Pay</button>
+					<button type="button" class="btn btn-success btn-retry" style="display:none">Retry</button>
+				  </div>
+			</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="testCustomTransaction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Try Me!</h4>
+      </div>
+	  <div class="modal-body">
+		<div class='row'>
+			<div class="col-md-10 payment-custom-form">
+				<div class="ajax-response-wrapper">
+				</div>
+				<div class='please-wait' style="display:none;">
+					<h3>Please wait.</h3>
+					<div class="progress">
+						  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+							<span class="sr-only">45% Complete</span>
+						  </div>
+					</div>
+				</div>
+				<div class="error-notifications"></div>
+				<div class="ajax-mainform-wrapper">
+					<p>
+						<form method="post" name="payment form" id="payment_form_custom">
+							{% csrf_token %}
+							  <div class="form-group">
+								<label for="merchant">Merchant</label>
+								<input type="text" class="form-control" id="merchant-name" name="merchantName">
+							  </div>
+							  <div class="form-group">
+								<label for="location">Location</label>
+								<select class="selectpicker form-control" id="location" name="location" >
+									{% for location in locations %}
+										<option value="{{location.international}}">{{location.name}}</option>
+									{% endfor %}
+								</select>
+							  </div>
+							  <div class="form-group">
+								<label for="merchant">Category</label>
+								<select class="selectpicker form-control" id="category" name="category" >
+									{% for category in TxnCategory %}
+										<option value="{{category.mccCode}}">{{category.name}}</option>
+									{% endfor %}
+								</select>
+							  </div>
+
+							{% bootstrap_form form %}
+							  <input type="hidden" name="card_number" class="card-num" value="">
+							  <input type="hidden" name="merchantUuid" id="merchant-id" class="merchantUuid" value="">
+						</form>
+					</p>
+				</div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-success btn-pay">Pay</button>
+					<button type="button" class="btn btn-success btn-retry" style="display:none">Retry</button>
+					<button type="button" class="btn btn-default btn-cancel" data-dismiss="modal">Cancel</button>
+				  </div>
+			</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>

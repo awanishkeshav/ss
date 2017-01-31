@@ -1,0 +1,25 @@
+import time
+import urllib,urllib2
+import json
+
+title ="x"
+message = "y"
+registrationId  = "APA91bHgOXUcL5Rg8qlv9xf0UcqdhXJBaHlxl7IuHduUoQ62cLNnYFahoYW818tKcpeIADqDo7Ze4oTIfZE16RNK0K7v3l30QdyTpWJvMX8f2ZNpHAn6RG_VcUnww2MY-jUj1BfH5mqevEYnSob7vDj9bVDdcxDEf8tOeuD3pojT3qvjmLWpqZ4"
+print "inside send"
+URL = "https://android.googleapis.com/gcm/send"
+API_ACCESS_KEY = "AIzaSyC5myLtS_v2PZANX_15KnYSz0YWaoZnyJM"
+
+
+
+data = dict(registration_id=[registrationId], data=dict(mymessage="themessage"))
+request = urllib2.Request(url=URL, data=json.dumps(data))
+request.add_header('Authorization','key='+API_ACCESS_KEY)
+request.add_header('Content-Type', 'application/json')
+
+print "inside try -"
+res = urllib2.urlopen(request)
+print "aft -"
+responseAsString = res.read()
+print "aft 2-"+responseAsString
+
+

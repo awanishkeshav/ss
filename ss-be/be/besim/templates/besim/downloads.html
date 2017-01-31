@@ -1,0 +1,73 @@
+{% load bootstrap3 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript jquery=1 %}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="{{ STATIC_URL }}besim/css/owl.carousel.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}besim/css/owl.theme.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}besim/css/besim.css" rel="stylesheet">
+
+<link  href="{{ STATIC_URL }}besim/css/bootstrap-modal.css" rel="stylesheet" />
+
+<script type="text/javascript" src="{{ STATIC_URL }}besim/js/besim.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}besim/js/bootstrap-modalmanager.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}besim/js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}besim/js/bootstrap-select.js"></script>
+
+<!--
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}besim/css/besim.css" />
+-->
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}besim/css/bootstrap-select.css">
+
+
+
+ <div class="container">
+
+    <div>
+        <br>
+    </div>
+    <div>
+        <a href="{{ MEDIA_URL }}media/dl/SBICards.apk"> SBI Consumer app </a>
+    </div>
+
+    <div>
+        <br>
+    </div>
+
+    <div>
+        <a href="{{ MEDIA_URL }}media/dl/SBIMerchants.apk"> SBI Merchant app </a>
+    </div>
+
+
+    <div>
+        <br>
+    </div>
+    <div>
+        <br>
+    </div>
+    <div>
+        <a href="{{ MEDIA_URL }}media/dl/IndusindCards.apk"> IndusInd Consumer app </a>
+    </div>
+
+    <div>
+        <br>
+    </div>
+
+    <div>
+        <a href="{{ MEDIA_URL }}media/dl/IndusindMerchants.apk"> IndusInd Merchant app </a>
+    </div>
+
+
+    <div>
+        <br>
+    </div>
+    <div>
+        <a href="/beapi/loadConsumerOffers" target="_blank"> Load offers for existing consumers </a>
+    </div>
+
+</div>
+

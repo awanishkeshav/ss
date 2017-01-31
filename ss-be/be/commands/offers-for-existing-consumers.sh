@@ -1,0 +1,1 @@
+curl http://demo.secondswipe.com/beapi/loadConsumerOffers

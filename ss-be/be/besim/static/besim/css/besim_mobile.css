@@ -1,0 +1,272 @@
+body{
+	padding-right: 0 !important;
+	background-color:#eee;
+}
+ body.modal-open { overflow:inherit; padding-right:inherit !important; }
+
+.page-wrapper{
+	width:320px;
+    margin: 12px auto 0;
+    position: relative;
+}
+
+.page-wrapper .jcarousel{
+	width:220px;
+}
+
+.page-wrapper .panel{
+	background-color:rgb(216, 216, 216);
+}
+
+.page-wrapper .panel-body{
+	padding:15px 18px 15px 15px;
+}
+
+.page-wrapper .section{
+	margin-bottom:20px;
+	margin-top:40px;
+}
+
+.col-md-3{
+	padding:0;
+}
+
+.page{
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    padding: 9px 14px;
+}
+
+.scenario-block{
+	cursor:pointer;
+	text-align:center;
+	width:150px;
+	box-shadow:0 0 30px #ccc;
+}
+
+.scenario-wrapper {
+	clear:both;
+}
+
+.scenario-wrapper a:focus ,.scenario-wrapper a:hover{
+	text-decoration:none;
+}
+
+.scenario-wrapper .category{
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    width: 220px;
+}
+
+.scenario-block img{
+	border-radius:5px 5px 0 0;
+}
+
+.scenario-block-footer{
+    color: #fff;
+    padding: 15px;
+	margin-top:-73px;
+	width:220px;
+    border-radius: 0 0 5px 5px;
+	text-align:center;
+}
+
+.scenario-block-footer-1{
+    background-color: rgb(149, 52, 55);
+}
+
+.scenario-block-footer-3{
+    background-color: rgb(41,154,22);
+}
+
+.scenario-block-footer-2{
+    background-color: rgb(55, 116, 153);
+}
+
+.scenario-block-footer-4{
+    background-color: rgb(227,108,9);
+}
+
+.scenario-block-footer .name{
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.scenario-block-footer .location{
+}
+
+.consumer-account-btn{ 
+    position: absolute;
+    right: 0;
+    top: 1px;
+}
+
+.wrapper{
+    width: 220px;
+    height: 275px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+	border-radius:5px 5px 0 0;
+}
+
+.modal-wrapper{
+    width: 150px;
+    height: 210px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+	border-radius:5px 5px 0 0;
+}
+
+.modal-footer{
+    border-top: medium none;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.modal-dialog{
+	width:320px !important;
+}
+
+.modal-body .scenario-block-footer{
+	width:150px;
+}
+
+.footer .my-card{
+    color: rgb(191, 191, 191);
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer .secondswipe{
+	color: rgb(154, 186, 215);
+    font-size: 2.4em;
+    text-align: center;
+}
+
+.scenario-block-footer-black{
+   background-color: #333;
+}
+
+.modal-body .payment-form{
+   margin-top: 40px;
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.modal-body{
+	padding:0;
+}
+
+#payment_form .control-label{
+	display:none;
+}
+
+.btn-success{
+	background-color:#333;
+	border-color:#333;
+}
+
+.btn-success:hover, .btn-success:focus{
+	background-color:#333;
+	border-color:#333;
+}
+
+.btn-default{
+	background-color:rgb(191,191,191);
+	border-color:rgb(191,191,191);
+	color:#fff;
+}
+
+.btn-default:hover, .btn-default:focus{
+	background-color:rgb(191,191,191);
+	border-color:rgb(191,191,191);
+	color:#fff;
+}
+
+.consumer-account-btn .btn-info{
+	background-color:rgb(191,191,191);
+	border-color:rgb(191,191,191);
+}
+
+.consumer-account-btn .btn-info:hover,.consumer-account-btn .btn-info:focus {
+	background-color:rgb(191,191,191);
+	border-color:rgb(191,191,191);
+}
+
+.response-time{
+	font-size:11px;
+}
+
+.server-response-error-msg{
+    color: #b94a48;
+    font-size: 11px;
+}
+
+.panel-body a:hover, .panel-body a:focus{
+	text-decoration:none;
+	color:#fff;
+}
+
+.scenario-block-footer-custom {
+	
+}
+
+.wrapper-custom {
+    width: 200px;
+    height: 279px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+	border-radius:5px;
+}
+
+.payment-custom-form label{
+	float:left;
+	width:80px;
+	color:rgb(166, 166, 166);
+}
+
+.payment-custom-form input,.payment-custom-form select{
+	width:170px;
+}
+
+.payment-custom-form {
+	padding:10px 0 0 30px;
+}
+
+.payment-custom-form .model-footer{
+	margin-left:115px;
+}
+
+.modal-header{
+	text-align:center;
+}
+
+.wrapper-custom img{
+    margin-left: 20%;
+    margin-top: 45%;
+}
+
+.bootstrap-select {
+    width: 168px !important;
+}
+
+.h2, h2 {
+    font-size: 20px;
+}
+
+.jcarousel-wrapper ul li{
+	display:inline-block;
+}
+
+.jcarousel-wrapper ul{
+    padding: 0;
+    text-align: center;	
+}
