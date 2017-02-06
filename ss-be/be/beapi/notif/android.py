@@ -49,7 +49,7 @@ class Android:
             type = type,
             txnId = txnId,
             cardId = cardId,
-            url = 'http://demo.secondswipe.com/beapi/consumer/txn/'+str(txnId)+'/approval',
+            url = 'http://ec2-34-198-167-207.compute-1.amazonaws.com/beapi/consumer/txn/'+str(txnId)+'/approval',
             screenMessage = screenMessage
             )
         self.sendToGCM(registrationId, data)
