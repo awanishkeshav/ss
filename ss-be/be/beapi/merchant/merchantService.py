@@ -459,7 +459,7 @@ class MerchantService:
         if status != ssConst.OFFER_STATUSES[0][0]:
             ConsumerOffer.objects\
                          .filter(offer_id=offerId)\
-                         .update(status=CONSUMER_OFFER_STATUSES[2][0])
+                         .update(status=ssConst.CONSUMER_OFFER_STATUSES[2][0])
         return merchantOffer
 
     def getOfferTargettingList(self, offerId):
