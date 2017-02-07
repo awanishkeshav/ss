@@ -16,6 +16,7 @@ from beapi.common.cacheService import CacheService
 from beapi.serializers import TxnReviewSerializer
 from beapi.notif.android import Android
 from django.db.models import Q
+from beapi.models import ConsumerOffer
 
 class MerchantService:
 
